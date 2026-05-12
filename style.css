@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+}
+
+/* Navbar */
+#navbar{
+    padding: 20px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#logo{
+    color: #4a63e7;
+}
+
+/* Main Layout */
+.container{
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Form Section */
+.form-section{
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Preview Section */
+.preview-section{
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+#resume-content{
+    background: white;
+    padding: 20px;
+    color: black;
+}
+
+/* Inputs */
+.input-field{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.input-field:focus{
+    border-color: #4a63e7;
+}
+
+textarea{
+    resize: none;
+    height: 120px;
+}
+
+/* Upload Label */
+.upload-label{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+/* Buttons */
+#add-project-btn,
+#download-btn{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #4a63e7;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+#add-project-btn:hover,
+#download-btn:hover{
+    background: #3249c5;
+}
+
+/* Resume Header */
+.resume-header{
+    text-align: center;
+}
+
+/* Profile Image */
+#preview-image{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4a63e7;
+    display: none;
+    margin: 0 auto 15px;
+}
+
+/* Resume Name */
+#preview-name{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Resume Role */
+#preview-role{
+    color: #4a63e7;
+    margin-bottom: 20px;
+}
+
+/* Resume Sections */
+.resume-section{
+    margin-top: 30px;
+}
+
+.resume-section h2{
+    color: #4a63e7;
+    margin-bottom: 10px;
+}
+
+.resume-section p{
+    line-height: 1.7;
+}
+
+/* Links */
+a{
+    text-decoration: none;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Skills */
+#preview-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag{
+    background: #4a63e7;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+/* Project Card */
+.project-card{
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #4a63e7;
+    background: #f7f8fc;
+    border-radius: 10px;
+}
+
+.project-card h3{
+    margin-bottom: 8px;
+}
+
+/* Horizontal Line */
+hr{
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+
+    .container{
+        flex-direction: column;
+    }
+
+}
+
+/* Navbar Layout */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Theme Button */
+#theme-toggle{
+    padding: 10px 20px;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover{
+    background: #333;
+}
+/* DARK MODE */
+.dark-mode{
+
+    background: #121212;
+    color: white;
+
+}
+
+/* Navbar */
+.dark-mode #navbar{
+
+    background: #1e1e1e;
+
+}
+
+/* Form Section */
+.dark-mode .form-section{
+
+    background: #1e1e1e;
+    color: white;
+
+}
+
+/* Preview Section */
+.dark-mode .preview-section{
+
+    background: #1e1e1e;
+    color: white;
+
+}
+
+/* Resume Content */
+.dark-mode #resume-content{
+
+    background: #1e1e1e;
+    color: white;
+
+}
+
+/* Inputs */
+.dark-mode .input-field{
+
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+
+}
+
+/* Links */
+.dark-mode a{
+
+    color: #ddd;
+
+}
+
+/* Project Card */
+.dark-mode .project-card{
+
+    background: #2a2a2a;
+
+}
+
+/* =========================
+   MODERN TEMPLATE
+========================= */
+
+.modern-template{
+
+    border-top: 8px solid #4a63e7;
+
+}
+
+/* =========================
+   MINIMAL TEMPLATE
+========================= */
+
+.minimal-template{
+
+    border-top: none;
+
+}
+
+.minimal-template .resume-header{
+
+    text-align: left;
+
+}
+
+.minimal-template .resume-section h2{
+
+    color: #111;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+
+}
+
+.minimal-template .skill-tag{
+
+    background: #222;
+
+}
+
+/* =========================
+   PROFESSIONAL TEMPLATE
+========================= */
+
+.professional-template{
+
+    border-left: 8px solid #4a63e7;
+    padding-left: 30px;
+
+}
+
+.professional-template .resume-header{
+
+    text-align: left;
+
+}
+
+.professional-template .resume-section h2{
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.professional-template .project-card{
+
+    border-left: none;
+    border: 1px solid #ccc;
+
+}
+
+#generate-summary-btn{
+
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+/* Project Header */
+.project-header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+}
+
+/* Delete Button */
+.delete-project-btn{
+
+    padding: 8px 14px;
+    border: none;
+    background: crimson;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.delete-project-btn:hover{
+
+    background: darkred;
+
+}
+
+/* Edit Button */
+.edit-project-btn{
+
+    padding: 8px 14px;
+    border: none;
+    background: #4a63e7;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+
+.edit-project-btn:hover{
+
+    background: #3249c5;
+
+}

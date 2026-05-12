@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI Resume Builder</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- PDF Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+
+  <body class="dark-mode">
+    <!-- Navbar -->
+    <nav id="navbar">
+      <h1 id="logo">AI Resume Builder</h1>
+      <button id="theme-toggle">☀️ Light Mode</button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Form Section -->
+      <div class="form-section">
+        <h2>Resume Details</h2>
+
+        <!-- Name -->
+        <input
+          type="text"
+          id="name-input"
+          class="input-field"
+          placeholder="Full Name"
+        />
+
+        <!-- Role -->
+        <input
+          type="text"
+          id="role-input"
+          class="input-field"
+          placeholder="Job Role"
+        />
+
+        <!-- About -->
+        <textarea
+          id="about-input"
+          class="input-field"
+          placeholder="About Yourself"
+        ></textarea>
+
+        <!-- Skills -->
+        <input
+          type="text"
+          id="skills-input"
+          class="input-field"
+          placeholder="Enter Skills (comma separated)"
+        />
+
+        <button id="generate-summary-btn">Generate AI Summary</button>
+        
+        <!-- GitHub -->
+        <input
+          type="url"
+          id="github-input"
+          class="input-field"
+          placeholder="GitHub Profile Link"
+        />
+
+        <!-- LinkedIn -->
+        <input
+          type="url"
+          id="linkedin-input"
+          class="input-field"
+          placeholder="LinkedIn Profile Link"
+        />
+
+        <!-- Experience -->
+        <select id="experience-input" class="input-field">
+          <option value="">Select Experience</option>
+          <option value="Fresher">Fresher</option>
+          <option value="Internship">Internship</option>
+          <option value="1+ Years">1+ Years</option>
+          <option value="2+ Years">2+ Years</option>
+        </select>
+
+        <!-- Projects -->
+        <h4>Add Projects</h4>
+
+        <input
+          type="text"
+          id="project-title-input"
+          class="input-field"
+          placeholder="Project Title"
+        />
+
+        <textarea
+          id="project-description-input"
+          class="input-field"
+          placeholder="Project Description"
+        ></textarea>
+
+        <button id="add-project-btn">Add Project</button>
+
+        <h4>Select Template</h4>
+
+        <select id="template-select" class="input-field">
+          <option value="modern">Modern</option>
+
+          <option value="minimal">Minimal</option>
+
+          <option value="professional">Professional</option>
+        </select>
+
+        <!-- Upload Image -->
+        <label for="image-input" class="upload-label">
+          Upload Profile Image
+        </label>
+
+        <input
+          type="file"
+          id="image-input"
+          class="input-field"
+          accept="image/*"
+        />
+      </div>
+
+      <!-- Preview Section -->
+      <div class="preview-section">
+        <div id="resume-content" class="modern-template">
+          <!-- Resume Header -->
+          <div class="resume-header">
+            <img id="preview-image" src="" alt="Profile Image" />
+
+            <h1 id="preview-name">John Doe</h1>
+
+            <h3 id="preview-role">Frontend Developer</h3>
+          </div>
+
+          <hr />
+
+          <!-- Contact -->
+          <div class="resume-section">
+            <h2>Contact</h2>
+
+            <a id="preview-github" href="#" target="_blank">
+              <strong>GitHub:</strong> github.com/johndoe
+            </a>
+
+            <br />
+
+            <a id="preview-linkedin" href="#" target="_blank">
+              <strong>LinkedIn:</strong> linkedin.com/in/johndoe
+            </a>
+          </div>
+
+          <!-- About -->
+          <div class="resume-section">
+            <h2>About Me</h2>
+
+            <p id="preview-about">Your about section will appear here.</p>
+          </div>
+
+          <!-- Skills -->
+          <div class="resume-section">
+            <h2>Skills</h2>
+
+            <div id="preview-skills"></div>
+          </div>
+
+          <!-- Experience -->
+          <div class="resume-section">
+            <h2>Experience</h2>
+
+            <p id="preview-experience">Fresher</p>
+          </div>
+
+          <!-- Projects -->
+          <div class="resume-section">
+            <h2>Projects</h2>
+
+            <div id="preview-projects"></div>
+          </div>
+        </div>
+
+        <!-- Download Button -->
+        <button id="download-btn">Download Resume</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
